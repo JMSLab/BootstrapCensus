@@ -1,15 +1,15 @@
 Import('*')
 
-target = ['#output/derived/bootstrap_census/Dinerstein_Smith_2021_Replicates.csv',
-          '#output/derived/bootstrap_census/Dinerstein_Smith_2021_Estimates.csv',
-          '#output/derived/bootstrap_census/Dinerstein_Smith_2021_Replicates.log',
-          '#output/derived/bootstrap_census/Dinerstein_Smith_2021_Estimates.log',
+target = ['#output/derived/Dinerstein_Smith_2021_Replicates.csv',
+          '#output/derived/Dinerstein_Smith_2021_Estimates.csv',
+          '#output/derived/Dinerstein_Smith_2021_Replicates.log',
+          '#output/derived/Dinerstein_Smith_2021_Estimates.log',
           '#temp/DS2021/temp/model_data/school_grade1_codes_2002_2012_weights.dta',
           '#temp/DS2021/temp/model_data/school_locations_enrollments.dta',
           '#temp/DS2021/temp/model_data/census_block_students.dta',
           '#temp/DS2021/temp/model_data/supply2002_annualexit_2002_2012_weights.csv',
           '#temp/DS2021/temp/model_data/supply_full_annual.mat'
           ]
-source = ['#source/derived/bootstrap_census/Dinerstein_Smith_2021/clean_replicates_ds2021.py',
-          '#datastore/raw/bootstrap_census/Dinerstein_Smith_2021/orig/DS2021.zip']
+source = ['#source/derived/Dinerstein_Smith_2021/clean_replicates_ds2021.py',
+          '#datastore/raw/Dinerstein_Smith_2021/orig/DS2021.zip']
 env.Python(target, source)

@@ -2,8 +2,8 @@ Import('*')
 
 target = ['#temp/K2021.zip',
           '#temp/K2021/Kaenzig_replication/data/dataBaseM.mat']
-source = ['#source/derived/bootstrap_census/Kanzig_2021/prepare_archive.py',
-          '#datastore/raw/bootstrap_census/Kanzig_2021/orig/K2021.zip']
+source = ['#source/derived/Kanzig_2021/prepare_archive.py',
+          '#datastore/raw/Kanzig_2021/orig/K2021.zip']
 env.Python(target, source)
 
 Kanzig_objects = ['CPIResponse', 'OilInventoriesResponse', 'OilPriceResponse', 'OilProductionResponse',
@@ -15,15 +15,13 @@ for object in Kanzig_objects:
     Kanzig_temp += [f'#temp/K2021/{object}.csv']
 
 target = Kanzig_temp
-source = ['#source/derived/bootstrap_census/Kanzig_2021/s03_figures3_5.m',
-          '#source/derived/bootstrap_census/digits_after_comma_precision.txt',
+source = ['#source/derived/Kanzig_2021/s03_figures3_5.m',
+          '#source/derived/digits_after_comma_precision.txt',
           '#temp/K2021/Kaenzig_replication/data/dataBaseM.mat']
 env.Matlab(target, source)
 
-target = ['#datastore/output/derived_large/bootstrap_census/Kanzig_2021_Replicates.csv',
-          '#datastore/output/derived_large/bootstrap_census/Kanzig_2021_Estimates.csv',
-          '#datastore/output/derived_large/bootstrap_census/Kanzig_2021_Replicates_manifest.log',
-          '#datastore/output/derived_large/bootstrap_census/Kanzig_2021_Estimates_manifest.log']
-source = ['#source/derived/bootstrap_census/Kanzig_2021/clean_replicates.py',
-          '#source/derived/bootstrap_census/digits_after_comma_precision.txt'] + Kanzig_temp    
+target = ['#datastore/output/Kanzig_2021_Replicates.csv',
+          '#datastore/output/Kanzig_2021_Estimates.csv']
+source = ['#source/derived/Kanzig_2021/clean_replicates.py',
+          '#source/derived/digits_after_comma_precision.txt'] + Kanzig_temp    
 env.Python(target, source)

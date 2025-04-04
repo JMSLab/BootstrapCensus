@@ -1,7 +1,7 @@
 Import('*')
 
-target = ['#output/derived/bootstrap_census/Kostol_Myhre_2021_Replicates.csv',
-          '#output/derived/bootstrap_census/Kostol_Myhre_2021_Estimates.csv']
-source = ['#source/derived/bootstrap_census/Kostol_Myhre_2021/clean_replicates.R',
-	  '#datastore/raw/bootstrap_census/Kostol_Myhre_2021/orig/bootstrap_tab3&4.xlsx']
+target = ['#output/derived/Kostol_Myhre_2021_Replicates.csv',
+          '#output/derived/Kostol_Myhre_2021_Estimates.csv']
+source = ['#source/derived/Kostol_Myhre_2021/clean_replicates.R',
+	  '#datastore/raw/Kostol_Myhre_2021/orig/bootstrap_tab3&4.xlsx']
 env.R(target, source)

@@ -2,46 +2,46 @@ Import('*')
 
 target = ['#temp/RW2021.zip',
           '#temp/RW2021/replication/data/main_amazon_sales.dta']
-source = ['#source/derived/bootstrap_census/Reimers_Waldfogel_2021/prepare_archive.py',
-          '#datastore/raw/bootstrap_census/Reimers_Waldfogel_2021/orig/RW2021.zip']
+source = ['#source/derived/Reimers_Waldfogel_2021/prepare_archive.py',
+          '#datastore/raw/Reimers_Waldfogel_2021/orig/RW2021.zip']
 env.Python(target, source)
 
 target = ['#temp/RW2021/replication/tempfiles/quantity_us_simulations.dta']
-source = ['#source/derived/bootstrap_census/Reimers_Waldfogel_2021/create_quantity_us_simulations.do',
+source = ['#source/derived/Reimers_Waldfogel_2021/create_quantity_us_simulations.do',
           '#temp/RW2021/replication/data/main_amazon_sales.dta', 
           '#temp/RW2021/replication/estimates/3coregint.ster']
 env.Stata(target, source)
 
 target = ['#temp/RW2021/replication/tempfiles/quantity_us_simulations_bs_1.dta']
-source = ['#source/derived/bootstrap_census/Reimers_Waldfogel_2021/create_quantity_us_simulations_bs.do',
+source = ['#source/derived/Reimers_Waldfogel_2021/create_quantity_us_simulations_bs.do',
           '#temp/RW2021/replication/data/main_amazon_sales.dta',
           '#temp/RW2021/replication/tempfiles/quantity_us_simulations.dta']
 env.Stata(target, source)
 
 target = ['#temp/RW2021/replication/estimates/3coregint.ster']
-source = ['#source/derived/bootstrap_census/Reimers_Waldfogel_2021/table_2_regressions.do',
+source = ['#source/derived/Reimers_Waldfogel_2021/table_2_regressions.do',
           '#temp/RW2021/replication/data/main_amazon_sales.dta']
 env.Stata(target, source)
 
 target = ['#temp/RW2021/table3_bottom_replicates.dta',
           '#temp/RW2021/table3_top_replicates.dta']
-source = ['#source/derived/bootstrap_census/Reimers_Waldfogel_2021/table_3_quantity_effects_bs.do',
+source = ['#source/derived/Reimers_Waldfogel_2021/table_3_quantity_effects_bs.do',
           '#temp/RW2021/replication/estimates/3coregint.ster',
           '#temp/RW2021/replication/tempfiles/quantity_us_simulations_bs_1.dta']
 env.Stata(target, source)
 
 target = ['#temp/RW2021/table4_replicates.dta']
-source = ['#source/derived/bootstrap_census/Reimers_Waldfogel_2021/table_4_welfare_effects_baseline_bs.do',
+source = ['#source/derived/Reimers_Waldfogel_2021/table_4_welfare_effects_baseline_bs.do',
           '#temp/RW2021/replication/tempfiles/quantity_us_simulations_bs_1.dta']
 env.Stata(target, source)
 
-target = ['#output/derived/bootstrap_census/Reimers_Waldfogel_2021_Replicates.csv',
-          '#output/derived/bootstrap_census/Reimers_Waldfogel_2021_Estimates.csv',
-          '#output/derived/bootstrap_census/Reimers_Waldfogel_2021_Estimates.log',
-          '#output/derived/bootstrap_census/Reimers_Waldfogel_2021_Replicates.log']
-source = ['#source/derived/bootstrap_census/Reimers_Waldfogel_2021/clean_replicates.py',
+target = ['#output/derived/Reimers_Waldfogel_2021_Replicates.csv',
+          '#output/derived/Reimers_Waldfogel_2021_Estimates.csv',
+          '#output/derived/Reimers_Waldfogel_2021_Estimates.log',
+          '#output/derived/Reimers_Waldfogel_2021_Replicates.log']
+source = ['#source/derived/Reimers_Waldfogel_2021/clean_replicates.py',
           '#temp/RW2021/table3_bottom_replicates.dta',
           '#temp/RW2021/table3_top_replicates.dta',
           '#temp/RW2021/table4_replicates.dta',
-          '#source/derived/bootstrap_census/digits_after_comma_precision.txt']
+          '#source/derived/digits_after_comma_precision.txt']
 env.Python(target, source)
