@@ -1,18 +1,16 @@
 import pandas as pd
 import numpy as np
-import sys
 import zipfile
-sys.path.append('source/lib/JMSLab')
 from statistics import stdev
-from SaveData import SaveData
+from source.lib.SaveData import SaveData
 
 
 def Main():
     paper = 'Bailey_Sun_Timpe_2021'
-    rawdir = 'datastore/raw/bootstrap_census/Bailey_Sun_Timpe_2021/orig'
+    rawdir = 'datastore/raw/Bailey_Sun_Timpe_2021/orig'
     indir = 'temp/B2021'
-    outdir = 'output/derived/bootstrap_census'
-    indir_precision = 'source/derived/bootstrap_census'
+    outdir = 'output/derived'
+    indir_precision = 'source/derived'
 
     objects_dic = {"ATETeconomicSelfSufficiency": "tab4_z_ess2_fullinfo_all",
                     "ATETyearsOfSchooling": "tab1_hc_1_fullinfo_all",
@@ -145,7 +143,7 @@ def check_estimates(df_estimates):
         The dataframe containing the object names and
         their estimates
     '''
-    indir = 'source/raw/bootstrap_census/orig'
+    indir = 'source/raw/orig'
     df_orig = pd.read_csv(f'{indir}/objects_of_interest.csv')
     df_orig = df_orig[df_orig['citation'] == 'Bailey_Sun_Timpe_2021']
     objects = df_estimates['object'].values

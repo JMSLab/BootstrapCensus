@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from source.lib.JMSLab.SaveData import SaveData
+from source.lib.SaveData import SaveData
 
 def Main():
     paper = 'Adermon_Lindahl_Palme_2021'
