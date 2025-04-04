@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Dinerstein_Smith_2021_Replicates.csv
+
+MD5 hash: 38bd9611efe971c9d4957cade0d6e0fd
+
+Keys: object replicate_number 
+
+                     type count unique    mean     std    min     50%      max
+object             object   100      1                                        
+replicate_number    int64   100         50.500  29.011  1.000  50.500  100.000
+replicate_value   float64   100         11.128   2.697  4.949  10.955   21.133
+

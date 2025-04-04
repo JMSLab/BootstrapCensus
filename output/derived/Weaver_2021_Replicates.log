@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Weaver_2021_Replicates.csv
+
+MD5 hash: 2e141e99e80d0969817209766506f1da
+
+Keys: object replicate_number 
+
+                     type   count unique     mean      std     min      50%        max
+object             object  16,994     13                                              
+replicate_number    int32  16,994         867.747  599.691   1.000  786.000  2,000.000
+replicate_value   float64  16,994           0.753    0.290  -0.563    0.850      1.862
+

@@ -1,0 +1,6 @@
+"object","estimate","std_err"
+"FractionNonoptimizers",0.387,0.02698722
+"ObservedBunchingElasticity",0.087,0.05861353
+"StructuralElasticity",0.286,0.07743303
+"EarningsElasticityInformed",0.15,0.01318838
+"EarningsElasticityNoninformed",0.058,0.01961295

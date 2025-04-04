@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Bourreau_Sun_Verboven_2021_Replicates.csv
+
+MD5 hash: f3c293cc0717b762bc20617fd85c3475
+
+Keys: object replicate_number 
+
+                     type  count unique     mean        std       min      50%        max
+object             object  3,980     20                                                  
+replicate_number    int32  3,980         100.000     57.453     1.000  100.000    199.000
+replicate_value   float64  3,980         821.936  1,152.384  -589.061  491.328  9,091.773
+

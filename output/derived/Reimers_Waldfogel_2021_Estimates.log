@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Reimers_Waldfogel_2021_Estimates.csv
+
+MD5 hash: 86769ed5e65e9b7d95903dbdd43be09c
+
+Keys: object 
+
+             type count unique   mean     std    min    50%     max
+object     object     7      7                                     
+estimate  float64     7         7.730  12.964  0.438  2.189  35.830
+std_err   float64     7         1.476   2.551  0.061  0.410   6.980
+

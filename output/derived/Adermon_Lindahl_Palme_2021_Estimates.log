@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Adermon_Lindahl_Palme_2021_Estimates.csv
+
+MD5 hash: 569bf9a31431a14b81b1a2adef25444d
+
+Keys: object 
+
+             type count unique   mean    std    min    50%    max
+object     object     2      2                                   
+estimate  float64     2         0.150  0.041  0.121  0.150  0.179
+std_err   float64     2         0.080  0.062  0.036  0.080  0.123
+

@@ -1,0 +1,8 @@
+object,estimate,std_err,lower_bound,upper_bound
+"CorrApplCostAbilityHighB",.5715608,.0482425,,
+"CorrApplCostAbilityLowB",.6398451,.0624969,,
+"IRRallApplicants",9.8407,17.40344,-18.70094,38.38234
+"IRRallHires",382.47,172.4027,44.56066,720.3793
+"IRRfemale",86.505,50.05216,4.41946,168.5905
+"MeanApplicationCostHighB",217.31,15.66163,,
+"MeanApplicationCostLowB",136.32,20.69419,,

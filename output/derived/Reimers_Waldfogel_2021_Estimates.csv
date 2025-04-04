@@ -1,0 +1,8 @@
+object,estimate,std_err
+AmazonStarElasticity,0.616,0.084
+AnnualPercentageIncreaseFollowingNYT,2.189,0.43
+DeltaConsumerSurplusRatio,11.27,2.28
+DeltaConsumerSurplusReviews,3.18,0.41
+DeltaConsumerSurplusStars,35.83,6.98
+PercentageIncreaseAfterNYTReview,0.438,0.061
+PercentageIncreaseAfterNYTReviewAndRecommendation,0.584,0.084

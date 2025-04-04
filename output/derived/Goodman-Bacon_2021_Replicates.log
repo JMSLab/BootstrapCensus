@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Goodman-Bacon_2021_Replicates.csv
+
+MD5 hash: 1afb80392c867e74fcc0f5a15924830c
+
+Keys: object replicate_number 
+
+                     type  count unique     mean      std         min      50%        max
+object             object  2,000      2                                                  
+replicate_number    int64  2,000         500.500  288.747       1.000  500.500  1,000.000
+replicate_value   float64  2,000         113.298  279.204  -1,421.702   24.762  7,617.899
+

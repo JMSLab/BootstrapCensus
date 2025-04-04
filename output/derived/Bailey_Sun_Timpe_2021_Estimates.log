@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Bailey_Sun_Timpe_2021_Estimates.csv
+
+MD5 hash: 30dc4d85cd184716cf9701e538d413ec
+
+Keys: object 
+
+             type count unique   mean    std    min    50%     max
+object     object     6      6                                    
+estimate  float64     6         7.942  6.474  0.650  7.300  18.000
+std_err   float64     6         2.450  1.530  0.165  2.807   4.526
+

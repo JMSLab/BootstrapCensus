@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Bourreau_Sun_Verboven_2021_Estimates.csv
+
+MD5 hash: a185ebd70e658f1de64c0795dd7a4c02
+
+Keys: object 
+
+            type count unique     mean        std       min      50%        max
+object    object    20     20                                                  
+estimate   int64    20         821.950  1,146.065  -354.000  495.500  4,562.000
+std_err    int64    20         177.250    226.870    15.000   62.000    928.000
+

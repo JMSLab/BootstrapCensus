@@ -1,0 +1,5 @@
+object,estimate,std_err
+"EarlyRetirementAge",.051,.0408017
+"FullRetirementAge",.072,.0388944
+"KinkSize",.05,.0418773
+"NormalRetirementAge",.218,.0799909

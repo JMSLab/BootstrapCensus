@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Reimers_Waldfogel_2021_Replicates.csv
+
+MD5 hash: 6cdcf1a346cd5ab2c7f75350a85edeb0
+
+Keys: object replicate_number 
+
+                     type  count unique     mean      std    min      50%      max
+object             object  3,499      7                                           
+replicate_number    int64  3,499         250.429  144.317  1.000  250.000  500.000
+replicate_value   float64  3,499           8.071   12.883  0.319    2.211   69.545
+

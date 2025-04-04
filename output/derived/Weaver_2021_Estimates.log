@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Weaver_2021_Estimates.csv
+
+MD5 hash: d06a47f431c384e60f76d6892b3e09da
+
+Keys: object 
+
+             type count unique   mean    std    min    50%    max
+object     object    13     13                                   
+estimate  float64    13         0.595  0.408  0.001  0.834  0.917
+std_err   float64    13         0.078  0.135  0.004  0.031  0.407
+
