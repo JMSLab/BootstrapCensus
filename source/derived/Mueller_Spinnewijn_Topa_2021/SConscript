@@ -1,0 +1,17 @@
+Import('*')
+
+target = ['#temp/est_mat_MST2021.csv',
+          '#temp/repl_mat_MST2021.csv',
+          '#temp/MST2021/MST/EMPIRICAL_ANALYSIS/Codes_and_Data/SCE/sce_datafile.dta']
+source = ['#source/derived/bootstrap_census/Mueller_Spinnewijn_Topa_2021/Master_Statistical_Framework.m',
+          '#datastore/raw/bootstrap_census/Mueller_Spinnewijn_Topa_2021/orig/MST2021.zip']
+env.Matlab(target, source)
+
+target = ['#output/derived/bootstrap_census/Mueller_Spinnewijn_Topa_2021_Replicates.csv',
+          '#output/derived/bootstrap_census/Mueller_Spinnewijn_Topa_2021_Estimates.csv',
+          '#output/derived/bootstrap_census/Mueller_Spinnewijn_Topa_2021_Replicates.log',
+          '#output/derived/bootstrap_census/Mueller_Spinnewijn_Topa_2021_Estimates.log']
+source = ['#source/derived/bootstrap_census/Mueller_Spinnewijn_Topa_2021/sce_tab3.do',
+          '#temp/MST2021/MST/EMPIRICAL_ANALYSIS/Codes_and_Data/SCE/sce_datafile.dta',
+          '#temp/est_mat_MST2021.csv','#temp/repl_mat_MST2021.csv']
+env.Stata(target, source)

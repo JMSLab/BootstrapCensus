@@ -1,14 +1,11 @@
 Import('*')
+import pandas as pd
+import numpy as np
+import sys
+import os
 
+df_papers = pd.read_csv('../../../source/raw/bootstrap_census/orig/papers.csv')
+papers = df_papers.loc[np.invert((df_papers['date_received'] != 'X').values ^ (df_papers['date_received'] != 'N').values), 'citation'].values
 
-target = ['#output/derived/wb_clean/gdp_education.csv']
-source = ['#source/derived/wb_clean/build.py',
-          '#source/lib/SaveData.py',
-          '#datastore/raw/world_bank/orig/API_NY.GDP.PCAP.CD_DS2_en_csv_v2_1740213.csv',
-          '#datastore/raw/world_bank/orig/API_SE.XPD.TOTL.GD.ZS_DS2_en_csv_v2_1740282.csv']
-env.Python(target, source)
-
-target = ['#output/derived/wb_clean/gdp_education_logs.csv']
-source = ['#source/derived/wb_clean/takelogs.do',
-          '#output/derived/wb_clean/gdp_education.csv']
-env.Stata(target, source)
+for paper in papers:
+    SConscript(f'{paper}/SConscript')
