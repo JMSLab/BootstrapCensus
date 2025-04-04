@@ -1,17 +1,14 @@
-import pandas as pd
-import sys
-from scipy.io import loadmat
-from scipy.stats import norm
-from statistics import stdev
-import pandas as pd
 import numpy as np
-sys.path.append('source/lib/JMSLab')
-from SaveData import SaveData
+import pandas as pd
+from scipy.io import loadmat
+from statistics import stdev
+from source.lib.JMSLab.SaveData import SaveData
 
 def Main():
     paper  = 'Kanzig_2021'
     indir  = 'temp/K2021'
     outdir = 'datastore/output/derived_large/bootstrap_census'
+    logdir = 'output/derived'
     indir_precision = 'source/derived/bootstrap_census'    
     
     objects = ['OilPriceResponse', 'OilProductionResponse', 'OilInventoriesResponse', 
@@ -32,7 +29,7 @@ def Main():
     df_replicates = df_replicates.round(n_digits)    
     df_estimates  = df_estimates.round(n_digits)    
     
-    stdev_list = PrepareReplicates(indir, outdir, paper,
+    stdev_list = PrepareReplicates(indir, outdir, logdir, paper,
                                   objects, df_replicates,
                                   df_replicates_cols, peak_months)
     PrepareEstimates(indir, outdir, paper, objects, df_estimates, 
@@ -40,7 +37,7 @@ def Main():
                                     stdev_list)
     
     
-def PrepareReplicates(indir, outdir, paper,
+def PrepareReplicates(indir, outdir, logdir, paper,
                                   objects, df_replicates,
                                   df_replicates_cols, peak_months):
     stdev_list = []
@@ -64,7 +61,7 @@ def PrepareReplicates(indir, outdir, paper,
     SaveData(df_replicates[['object', 'replicate_number', 'replicate_value']],
              keys    = ['object', 'replicate_number'],
              out_file = f'{outdir}/{paper}_Replicates.csv',
-             log_file = f'{outdir}/{paper}_Replicates_manifest.log')
+             log_file = f'{logdir}/{paper}_Replicates_manifest.log')
     return stdev_list
     
     
