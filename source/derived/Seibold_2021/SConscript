@@ -1,10 +1,10 @@
 Import('*')
 
-target = ['#output/derived/bootstrap_census/Seibold_2021_Replicates.csv',
-          '#output/derived/bootstrap_census/Seibold_2021_Estimates.csv',
-          '#output/derived/bootstrap_census/Seibold_2021_Replicates.log',
-          '#output/derived/bootstrap_census/Seibold_2021_Estimates.log']
-source = ['#source/derived/bootstrap_census/Seibold_2021/clean_replicates_s2021.do',
-	  '#datastore/raw/bootstrap_census/Seibold_2021/orig/table4_1.dta',
-	  '#datastore/raw/bootstrap_census/Seibold_2021/orig/tablea6.dta']
+target = ['#output/derived/Seibold_2021_Replicates.csv',
+          '#output/derived/Seibold_2021_Estimates.csv',
+          '#output/derived/Seibold_2021_Replicates.log',
+          '#output/derived/Seibold_2021_Estimates.log']
+source = ['#source/derived/Seibold_2021/clean_replicates_s2021.do',
+	  '#datastore/raw/Seibold_2021/orig/table4_1.dta',
+	  '#datastore/raw/Seibold_2021/orig/tablea6.dta']
 env.Stata(target, source)
