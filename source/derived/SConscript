@@ -2,7 +2,7 @@ Import('*')
 import pandas as pd
 import numpy as np
 
-df_papers = pd.read_csv('../../../source/raw/orig/papers.csv')
+df_papers = pd.read_csv('../../source/raw/orig/papers.csv')
 papers = df_papers.loc[np.invert((df_papers['date_received'] != 'X').values ^ (
     df_papers['date_received'] != 'N').values), 'citation'].values
 
