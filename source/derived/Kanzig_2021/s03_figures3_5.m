@@ -1,7 +1,7 @@
 clear all
 close all
 clc
-indir_precision = 'source/derived/bootstrap_census'
+indir_precision = 'source/derived'
 
 n_digits = readmatrix(sprintf('%s/digits_after_comma_precision.txt', indir_precision));
 

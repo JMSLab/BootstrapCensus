@@ -2,14 +2,14 @@ import numpy as np
 import pandas as pd
 from scipy.io import loadmat
 from statistics import stdev
-from source.lib.JMSLab.SaveData import SaveData
+from source.lib.SaveData import SaveData
 
 def Main():
     paper  = 'Kanzig_2021'
     indir  = 'temp/K2021'
-    outdir = 'datastore/output/derived_large/bootstrap_census'
+    outdir = 'datastore/output/derived_large'
     logdir = 'output/derived'
-    indir_precision = 'source/derived/bootstrap_census'    
+    indir_precision = 'source/derived'    
     
     objects = ['OilPriceResponse', 'OilProductionResponse', 'OilInventoriesResponse', 
                 'WorldProductionResponse', 'USProductionResponse', 'CPIResponse']

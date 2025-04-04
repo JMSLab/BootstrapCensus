@@ -4,7 +4,7 @@ clear matrix
 
 global indir "temp/MST2021/MST/EMPIRICAL_ANALYSIS/Codes_and_Data/SCE"
 global temp "temp"
-global outdir "output/derived/bootstrap_census"
+global outdir "output/derived"
 
 ***************
 *** Table 3 ***

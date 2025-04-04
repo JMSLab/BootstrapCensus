@@ -3,9 +3,9 @@
 %%%%%%%%%
 indir  = 'temp/MST2021/MST/STATISTICAL_FRAMEWORK';
 temp   = 'temp';
-outdir = 'output/derived/bootstrap_census';
+outdir = 'output/derived';
 
-unzip('datastore/raw/bootstrap_census/Mueller_Spinnewijn_Topa_2021/orig/MST2021', 'temp')
+unzip('datastore/raw/Mueller_Spinnewijn_Topa_2021/orig/MST2021', 'temp')
 addpath(indir,temp,outdir)
 
 %% Load estimation results

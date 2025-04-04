@@ -2,9 +2,9 @@ set more off
 preliminaries
 
 program main
-	local indir "datastore/raw/bootstrap_census/Seibold_2021/orig"
+	local indir "datastore/raw/Seibold_2021/orig"
 	local temp  "temp"
-	local outdir "output/derived/bootstrap_census"
+	local outdir "output/derived"
 	
 	build_replicates, filename("table4_1") object("KinkSize") var("eps5") avg(".050") indir(`indir') temp(`temp') append(0)
 	build_replicates, filename("table4_1") object("EarlyRetirementAge") var("coeff_era5") avg(".051") indir(`indir') temp(`temp') append(1)

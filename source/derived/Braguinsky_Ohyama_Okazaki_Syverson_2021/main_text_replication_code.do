@@ -6,8 +6,8 @@ set more off
 program main
 	local indir "temp/BOOS2021"
     local temp "temp"
-    local outdir "output/derived/bootstrap_census"
-	local rawdir "datastore/raw/bootstrap_census/Braguinsky_Ohyama_Okazaki_Syverson_2021/orig"
+    local outdir "output/derived"
+	local rawdir "datastore/raw/Braguinsky_Ohyama_Okazaki_Syverson_2021/orig"
 
     capture erase "`temp'/BOOS2021/replicates.dta"
     copy "`rawdir'/BOOS2021.zip" "`temp'/BOOS2021.zip", replace
@@ -114,7 +114,7 @@ program extract_data
     keep if est_inc
 
     *** NOTE: depending on your computer it may take some time (20 minutes or more) to complete the following command
-    adopath ++ source/derived/bootstrap_census/Braguinsky_Ohyama_Okazaki_Syverson_2021
+    adopath ++ source/derived/Braguinsky_Ohyama_Okazaki_Syverson_2021
     set rmsg on
 
 *** using modified ADO file to correct error in original replication code

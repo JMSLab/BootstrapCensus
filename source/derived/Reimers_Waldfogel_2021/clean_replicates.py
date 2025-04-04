@@ -1,15 +1,13 @@
 import pandas as pd
 import numpy as np
-import sys
-sys.path.append('source/lib/JMSLab')
-from SaveData import SaveData
+from source.lib.SaveData import SaveData
 
 def Main():
     paper                = 'Reimers_Waldfogel_2021'
     indir_replicates     = 'temp/RW2021'
-    indir_objects_of_int = 'source/raw/bootstrap_census/orig' 
-    outdir               = 'output/derived/bootstrap_census'
-    indir_precision      = 'source/derived/bootstrap_census'
+    indir_objects_of_int = 'source/raw/orig' 
+    outdir               = 'output/derived'
+    indir_precision      = 'source/derived'
     
     file_names       = ['table3_bottom_replicates.dta',
                         'table3_top_replicates.dta',

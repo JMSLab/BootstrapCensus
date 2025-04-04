@@ -2,7 +2,7 @@ import os
 import shutil
 
 def Main():
-    indir = 'datastore/raw/bootstrap_census/Reimers_Waldfogel_2021/orig'
+    indir = 'datastore/raw/Reimers_Waldfogel_2021/orig'
     temp  = 'temp'
     archive_name = 'RW2021'
     

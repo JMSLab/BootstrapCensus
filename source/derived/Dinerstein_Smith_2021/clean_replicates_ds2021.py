@@ -1,18 +1,16 @@
 import pandas as pd
 import numpy as np
-import sys
 import shutil
-sys.path.append('source/lib/JMSLab')
-from SaveData import SaveData
+from source.lib.SaveData import SaveData
 
 def Main():
     paper = 'Dinerstein_Smith_2021'
     
-    rawdir  = f'datastore/raw/bootstrap_census/{paper}/orig'
+    rawdir  = f'datastore/raw/{paper}/orig'
     temp = 'temp'
     indir = 'temp/DS2021/temp/model_data'
-    indir_objects_of_int = 'source/raw/bootstrap_census/orig' 
-    outdir = 'output/derived/bootstrap_census'
+    indir_objects_of_int = 'source/raw/orig' 
+    outdir = 'output/derived'
     
     shutil.unpack_archive(f'{rawdir}/DS2021.zip', temp)
     

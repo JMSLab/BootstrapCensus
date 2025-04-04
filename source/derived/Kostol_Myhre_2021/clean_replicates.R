@@ -2,10 +2,10 @@ library(readxl)
 
 Main <- function(){
   paper  <- "Kostol_Myhre_2021"
-  indir  <- "datastore/raw/bootstrap_census/Kostol_Myhre_2021/orig"
-  outdir <- "output/derived/bootstrap_census"
+  indir  <- "datastore/raw/Kostol_Myhre_2021/orig"
+  outdir <- "output/derived"
   
-  precision_file <- "source/derived/bootstrap_census/digits_after_comma_precision.txt"
+  precision_file <- "source/derived/digits_after_comma_precision.txt"
   n_digits <- as.numeric(read.table(precision_file, quote="\"", comment.char=""))
   
   PrepareReplicatesAndEstimates(paper, indir, outdir, n_digits)

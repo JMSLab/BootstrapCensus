@@ -1,15 +1,13 @@
 import pandas as pd
 import numpy as np
-import sys
-sys.path.append('source/lib/JMSLab')
-from SaveData import SaveData
+from source.lib.SaveData import SaveData
 
 def main():
     paper = 'Weaver_2021'
-    indir = f'datastore/raw/bootstrap_census/{paper}/orig'
-    indir_objects_of_int = 'source/raw/bootstrap_census/orig'
-    outdir = 'output/derived/bootstrap_census'
-    indir_precision = 'source/derived/bootstrap_census'
+    indir = f'datastore/raw/{paper}/orig'
+    indir_objects_of_int = 'source/raw/orig'
+    outdir = 'output/derived'
+    indir_precision = 'source/derived'
 
     n_digits = pd.read_csv(f'{indir_precision}/digits_after_comma_precision.txt',
                            header = None)[0][0]

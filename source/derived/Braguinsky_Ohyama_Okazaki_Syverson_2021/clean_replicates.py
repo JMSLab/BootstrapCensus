@@ -1,15 +1,13 @@
 import pandas as pd
 import numpy as np
-import sys
-sys.path.append('source/lib/JMSLab')
-from SaveData import SaveData
+from source.lib.SaveData import SaveData
 
 def main():
     paper = 'Braguinsky_Ohyama_Okazaki_Syverson_2021'
     indir = 'temp/BOOS2021'
-    indir_objects_of_int = 'source/raw/bootstrap_census/orig'
-    outdir = 'output/derived/bootstrap_census'
-    indir_precision = 'source/derived/bootstrap_census'
+    indir_objects_of_int = 'source/raw/orig'
+    outdir = 'output/derived'
+    indir_precision = 'source/derived'
 
     n_digits = pd.read_csv(f'{indir_precision}/digits_after_comma_precision.txt',
                            header = None)[0][0]
@@ -132,4 +130,5 @@ def IntegrityCheck(df_OOI, df_replicates, df_estimates):
 
         assert abs(std_err - rep_std_err) < 0.001
 
-main()
+if __name__ == "__main__":
+    main()

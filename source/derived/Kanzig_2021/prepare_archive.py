@@ -2,7 +2,7 @@ import os
 import shutil
 
 def Main():
-    indir = 'datastore/raw/bootstrap_census/Kanzig_2021/orig'
+    indir = 'datastore/raw/Kanzig_2021/orig'
     temp  = 'temp'
     archive_name = 'K2021'
     
