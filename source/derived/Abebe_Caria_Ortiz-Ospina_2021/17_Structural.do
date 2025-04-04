@@ -5,13 +5,13 @@ set more off
 
 global indir "temp/ACO2021/code/matlab/results"
 global temp "temp"
-global outdir "output/derived/bootstrap_census"
+global outdir "output/derived"
 
 set matsize 4500
 set seed 1878499
 
 *window manage forward results 
-local rawdir "datastore/raw/bootstrap_census/Abebe_Caria_Ortiz-Ospina_2021/orig"
+local rawdir "datastore/raw/Abebe_Caria_Ortiz-Ospina_2021/orig"
 copy "`rawdir'/ACO2021.zip" "${temp}/ACO2021.zip", replace
 cd ${temp}
 unzipfile "ACO2021.zip", replace
