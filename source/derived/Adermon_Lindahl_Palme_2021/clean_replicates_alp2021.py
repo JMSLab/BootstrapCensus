@@ -1,15 +1,13 @@
 import pandas as pd
 import numpy as np
-import sys
-sys.path.append('source/lib/JMSLab')
-from SaveData import SaveData
+from source.lib.JMSLab.SaveData import SaveData
 
 def Main():
     paper = 'Adermon_Lindahl_Palme_2021'
     
-    indir  = f'datastore/raw/bootstrap_census/{paper}/orig'
-    indir_objects_of_int = 'source/raw/bootstrap_census/orig' 
-    outdir = 'output/derived/bootstrap_census'
+    indir  = f'datastore/raw/{paper}/orig'
+    indir_objects_of_int = 'source/raw/orig' 
+    outdir = 'output/derived'
     
     df_OOI = pd.read_csv(f'{indir_objects_of_int}/objects_of_interest.csv')
     df_replicates_raw = pd.read_csv(f'{indir}/bs_replicates_adermon.csv')
@@ -56,7 +54,5 @@ def IntegrityCheck(object, df_estimates, df_replicates):
     replicate_se = np.around(np.std(df_replicates['replicate_value'][df_replicates['object']==object]), decimals = 3)
     
     assert(np.abs(paper_se-replicate_se) <= 0.001)
-
-
     
 Main()
