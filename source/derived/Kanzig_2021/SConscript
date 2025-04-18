@@ -20,8 +20,8 @@ source = ['#source/derived/Kanzig_2021/s03_figures3_5.m',
           '#temp/K2021/Kaenzig_replication/data/dataBaseM.mat']
 env.Matlab(target, source)
 
-target = ['#datastore/output/Kanzig_2021_Replicates.csv',
-          '#datastore/output/Kanzig_2021_Estimates.csv']
+target = ['#output/derived/Kanzig_2021_Replicates.csv',
+          '#output/derived/Kanzig_2021_Estimates.csv']
 source = ['#source/derived/Kanzig_2021/clean_replicates.py',
           '#source/derived/digits_after_comma_precision.txt'] + Kanzig_temp    
 env.Python(target, source)

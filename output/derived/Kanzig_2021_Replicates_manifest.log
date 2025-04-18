@@ -1,0 +1,11 @@
+File: datastore/output/derived_large/bootstrap_census/Kanzig_2021_Replicates.csv
+
+MD5 hash: 635802f9d9af1500d7be2d17831f5fe3
+
+Keys: object replicate_number 
+
+                     type   count      unique   mean    std      min    50%     max
+object             object  60,000           6                                      
+replicate_number   object  60,000  10,000.000                                      
+replicate_value   float64  60,000              1.943  4.739  -43.765  0.057  72.775
+
