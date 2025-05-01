@@ -15,7 +15,7 @@ For each paper, the directory [`output/derived`](./output/derived) includes two 
   - `derived/`: code for each paper
 - `output/`: estimates and replicates for each paper's objects of interest
 
-The structure and requirements of the repository follow [JMSLab/Template](https://github.com/JMSLab/Template/tree/e1fccecbf3b9dfc1c2479912cf3315cb9e6f9fe5). If you wish to run the code in the repository, please see the documentation there. Before running `scons` in this repository, execute `export PYTHONPATH=.`.
+The structure and requirements of the repository follow [JMSLab/Template](https://github.com/JMSLab/Template/tree/e1fccecbf3b9dfc1c2479912cf3315cb9e6f9fe5). If you wish to run the code in the repository, please see the documentation there.
 
 ### Citations
 
