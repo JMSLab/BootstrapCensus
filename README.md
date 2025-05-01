@@ -11,7 +11,6 @@ For each paper, the directory [`output/derived`](./output/derived) includes two 
 - [`datastore/raw`](https://drive.google.com/drive/u/1/folders/15cxte8q811VV3lv6Fz-zRUBdWrTshkul): original information (bootstrap replicates, replication archives, and correspondence) for each paper in census
 - `source/`
   - `raw/`: metadata on papers and their objects of interest
-  - `lib/`: software requirements and helper functions
   - `derived/`: code for each paper
 - `output/`: estimates and replicates for each paper's objects of interest
 
