@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Braguinsky_Ohyama_Okazaki_Syverson_2021_Estimates.csv
+
+MD5 hash: 8ef2c4ece16d53c6d606bb5d8cd3f3d5
+
+Keys: object 
+
+             type count unique   mean    std     min    50%    max
+object     object     2      2                                    
+estimate  float64     2         0.034  0.067  -0.014  0.034  0.081
+std_err   float64     2         0.024  0.014   0.014  0.024  0.034
+

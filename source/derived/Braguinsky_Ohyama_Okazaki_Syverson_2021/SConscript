@@ -1,0 +1,19 @@
+Import('*')
+
+target = ['#temp/BOOS2021/estimates.txt',
+          '#temp/BOOS2021/replicates.dta',
+          '#temp/BOOS2021.zip',
+          '#temp/BOOS2021/Final-data-and-programs/main_data.dta']
+source = ['#source/derived/Braguinsky_Ohyama_Okazaki_Syverson_2021/main_text_replication_code.do',
+          '#datastore/raw/Braguinsky_Ohyama_Okazaki_Syverson_2021/orig/BOOS2021.zip',
+          '#source/derived/Braguinsky_Ohyama_Okazaki_Syverson_2021/boos_2sls_2_modified.ado']
+env.Stata(target, source)
+
+target = ['#output/derived/Braguinsky_Ohyama_Okazaki_Syverson_2021_Replicates.csv',
+          '#output/derived/Braguinsky_Ohyama_Okazaki_Syverson_2021_Estimates.csv',
+          '#output/derived/Braguinsky_Ohyama_Okazaki_Syverson_2021_Replicates.log',
+          '#output/derived/Braguinsky_Ohyama_Okazaki_Syverson_2021_Estimates.log']
+source = ['#source/derived/Braguinsky_Ohyama_Okazaki_Syverson_2021/clean_replicates.py',
+          '#temp/BOOS2021/estimates.txt', '#temp/BOOS2021/replicates.dta',
+          '#source/raw/orig/objects_of_interest.csv']
+env.Python(target, source)

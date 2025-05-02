@@ -1,0 +1,9 @@
+Import('*')
+
+target = ['#output/derived/Bailey_Sun_Timpe_2021_Replicates.csv',
+          '#output/derived/Bailey_Sun_Timpe_2021_Estimates.csv',
+          '#output/derived/Bailey_Sun_Timpe_2021_Estimates.log',
+          '#output/derived/Bailey_Sun_Timpe_2021_Replicates.log']
+source = ['#source/derived/Bailey_Sun_Timpe_2021/clean_replicates.py',
+	  '#datastore/raw/Bailey_Sun_Timpe_2021/orig/replicates.zip']
+env.Python(target, source)

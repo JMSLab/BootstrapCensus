@@ -1,0 +1,9 @@
+Import('*')
+
+target = ['#output/derived/Adermon_Lindahl_Palme_2021_Replicates.csv',
+          '#output/derived/Adermon_Lindahl_Palme_2021_Estimates.csv',
+          '#output/derived/Adermon_Lindahl_Palme_2021_Replicates.log',
+          '#output/derived/Adermon_Lindahl_Palme_2021_Estimates.log']
+source = ['#source/derived/Adermon_Lindahl_Palme_2021/clean_replicates_alp2021.py',
+          '#datastore/raw/Adermon_Lindahl_Palme_2021/orig/bs_replicates_adermon.csv']
+env.Python(target, source)

@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Goodman-Bacon_2021_Estimates.csv
+
+MD5 hash: d317727f4bb808fb8b7a99d0bd739868
+
+Keys: object 
+
+             type count unique     mean      std     min      50%      max
+object     object     2      2                                            
+estimate  float64     2         113.570  146.272  10.140  113.570  217.000
+std_err   float64     2         203.685  229.537  41.378  203.685  365.992
+

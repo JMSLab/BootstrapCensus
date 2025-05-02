@@ -1,0 +1,11 @@
+File: datastore/output/derived_large/bootstrap_census/Kanzig_2021_Estimates.csv
+
+MD5 hash: b806060f0cd2ca2fd2d4b6247c8f732a
+
+Keys: object 
+
+             type count unique   mean    std     min     50%     max
+object     object     6      6                                      
+estimate  float64     6         2.034  5.373  -1.060  -0.070  12.865
+std_err   float64     6         0.660  0.682   0.250   0.431   2.038
+

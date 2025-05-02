@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Dinerstein_Smith_2021_Estimates.csv
+
+MD5 hash: ed074fab10de5c5575f201074ec37e72
+
+Keys: object 
+
+             type count unique   mean std    min    50%    max
+object     object     1      1                                
+estimate  float64     1         9.780      9.780  9.780  9.780
+std_err   float64     1         2.700      2.700  2.700  2.700
+

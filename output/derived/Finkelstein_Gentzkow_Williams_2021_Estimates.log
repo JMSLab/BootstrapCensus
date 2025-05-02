@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Finkelstein_Gentzkow_Williams_2021_Estimates.csv
+
+MD5 hash: 7602304db07221d9394060e3622915a9
+
+Keys: object 
+
+             type count unique   mean    std    min    50%    max
+object     object     3      3                                   
+estimate  float64     3         0.427  0.270  0.150  0.440  0.690
+std_err   float32     3         0.095  0.036  0.062  0.087  0.134
+

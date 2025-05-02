@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Bailey_Sun_Timpe_2021_Replicates.csv
+
+MD5 hash: 6af6225bd954aec509929b45bba73c0e
+
+Keys: object replicate_number 
+
+                     type  count unique     mean      std     min      50%        max
+object             object  6,000      6                                              
+replicate_number    int64  6,000         500.500  288.699   1.000  500.500  1,000.000
+replicate_value   float32  6,000           7.983    6.556  -4.573    7.092     34.292
+

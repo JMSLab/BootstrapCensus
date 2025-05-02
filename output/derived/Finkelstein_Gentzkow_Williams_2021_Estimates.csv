@@ -1,0 +1,4 @@
+object,estimate,std_err
+ReductionInVarianceEqualizingHealthCapital,0.69,0.08733917
+ReductionInVarianceEqualizingPlaceEffects,0.15,0.13403998
+StandardDeviationOfTreatmentEffects,0.44,0.0622223

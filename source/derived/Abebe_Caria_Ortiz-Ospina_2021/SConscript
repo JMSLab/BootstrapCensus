@@ -1,0 +1,10 @@
+Import('*')
+
+target = ['#output/derived/Abebe_Caria_Ortiz-Ospina_2021_Replicates.csv',
+          '#output/derived/Abebe_Caria_Ortiz-Ospina_2021_Estimates.csv',
+          '#output/derived/Abebe_Caria_Ortiz-Ospina_2021_Replicates.log',
+          '#output/derived/Abebe_Caria_Ortiz-Ospina_2021_Estimates.log',
+          '#temp/ACO2021/data/generated/MainExperiment_ForAnalysis.dta']
+source = ['#source/derived/Abebe_Caria_Ortiz-Ospina_2021/17_Structural.do',
+          '#datastore/raw/Abebe_Caria_Ortiz-Ospina_2021/orig/ACO2021.zip']
+env.Stata(target, source)

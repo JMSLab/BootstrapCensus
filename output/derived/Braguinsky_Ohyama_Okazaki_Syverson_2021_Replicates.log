@@ -1,0 +1,11 @@
+File: output/derived/bootstrap_census/Braguinsky_Ohyama_Okazaki_Syverson_2021_Replicates.csv
+
+MD5 hash: 65a843f70baf9a77bdd0db529499d7f1
+
+Keys: object replicate_number 
+
+                     type  count unique     mean      std     min      50%        max
+object             object  2,000      2                                              
+replicate_number    int64  2,000         500.500  288.747   1.000  500.500  1,000.000
+replicate_value   float32  2,000           0.031    0.055  -0.143    0.013      0.274
+

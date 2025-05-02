@@ -1,0 +1,27 @@
+Import('*')
+
+target = ['#temp/K2021.zip',
+          '#temp/K2021/Kaenzig_replication/data/dataBaseM.mat']
+source = ['#source/derived/Kanzig_2021/prepare_archive.py',
+          '#datastore/raw/Kanzig_2021/orig/K2021.zip']
+env.Python(target, source)
+
+Kanzig_objects = ['CPIResponse', 'OilInventoriesResponse', 'OilPriceResponse', 'OilProductionResponse',
+                  'USProductionResponse', 'WorldProductionResponse']
+
+Kanzig_temp = []
+
+for object in Kanzig_objects:
+    Kanzig_temp += [f'#temp/K2021/{object}.csv']
+
+target = Kanzig_temp
+source = ['#source/derived/Kanzig_2021/s03_figures3_5.m',
+          '#source/derived/digits_after_comma_precision.txt',
+          '#temp/K2021/Kaenzig_replication/data/dataBaseM.mat']
+env.Matlab(target, source)
+
+target = ['#output/derived/Kanzig_2021_Replicates.csv',
+          '#output/derived/Kanzig_2021_Estimates.csv']
+source = ['#source/derived/Kanzig_2021/clean_replicates.py',
+          '#source/derived/digits_after_comma_precision.txt'] + Kanzig_temp    
+env.Python(target, source)

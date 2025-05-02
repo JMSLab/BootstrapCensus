@@ -1,0 +1,14 @@
+object,estimate,std_err
+GvmntAllAppUB,0.904,0.02711976
+GvmntEndogAppUB,0.9,0.03291085
+GvmntObsAppUB,0.892,0.0308276
+HealthAllAppUB,0.834,0.03413751
+HealthEndogInUB,0.851,0.0351384
+HealthObsAppUB,0.842,0.03036559
+HealthStatedUB,0.811,0.04091309
+WealthDots,0.000909,0.00406455
+WealthFunc,0.741,0.35573703
+WealthInstDeliv,0.0229,0.01079943
+WealthNewCheck,0.0115,0.00610772
+WealthNutCoun,0.00769,0.00481397
+WealthSPI,0.917,0.40685764

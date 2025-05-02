@@ -1,0 +1,4 @@
+object,estimate,std_err
+"LowerBoundVarJobFindingProb",.0317205,.0085135
+"ShareExplainedBySelection",84.7092,36.3681
+"SlopeBias",.54991,.100833
