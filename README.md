@@ -2,7 +2,7 @@
 
 This repository contains data from a census of papers published in the *American Economic Review* in 2021 that use a bootstrap, as described in Andrews and Shapiro (2025b).
 
-For each paper, the directory [`output/derived`](./output/derived) includes two `CSV` files:
+For each paper, the directory [`output/derived`](./output/derived) includes two CSV files (and their corresponding log files with summary statistics):
 * `NAME_Estimates.csv` contains the authors' original point estimates, bootstrap standard errors and (where reported) confidence intervals for selected objects of interest
 * `NAME_Replicates.csv` contains the bootstrap replicates for each object of interest
 
