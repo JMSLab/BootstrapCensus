@@ -8,3 +8,7 @@ papers = df_papers.loc[np.invert((df_papers['date_received'] != 'X').values ^ (
 
 for paper in papers:
     SConscript(f'{paper}/SConscript')
+
+target = ['#output/derived/mismatched_replicates.csv']
+source = ['#source/derived/replicate_integrity_check.py']
+env.Python(target, source)
