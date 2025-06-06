@@ -24,6 +24,8 @@
 *.handout.pdf
 *.handout.lyx
 *.synctex.gz
+*.sh
+bootstrapcensus.txt
 
 # git-lfs files cannot be included in a template repository
 output/analysis/plots/gdp_educ.png
