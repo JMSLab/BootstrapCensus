@@ -11,8 +11,8 @@ for paper in papers:
 
 target = ['#output/derived/mismatched_replicates.csv']
 source = ['#source/derived/replicate_integrity_check.py',
-          '#source/raw/bootstrap_census/source/raw/orig/objects_of_interest.csv']
+          '#source/raw/orig/objects_of_interest.csv']
 for paper in papers:
-    source += [f'#source/raw/bootstrap_census/output/derived/{paper}_Replicates.csv']
+    source += [f'#output/derived/{paper}_Replicates.csv']
 
 env.Python(target, source)
